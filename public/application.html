@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="./css/application.css">
+</head>
+<body>
+    <div class="container">
+        <form id="applicationForm" enctype="multipart/form-data">
+            <h2>Application Form</h2>
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" name="firstName" required>
+            </div>
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" name="lastName" required>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label>Phone No</label>
+                <input type="tel" name="phoneNo" required>
+            </div>
+            <div class="input-group">
+                <label>Address</label>
+                <textarea name="address" rows="2" required></textarea>
+            </div>
+            <div class="input-group">
+                <label>Qualification</label>
+                <select name="qualification" required>
+                    <option value="">-Select-</option>
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                    <option value="Under-Graduate">Under-Graduate</option>
+                    <option value="Graduate">Graduate</option>
+                    <option value="Post Graduate">Post Graduate</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Position Applying For</label>
+
+                <select name="jobRole" required>
+                    <option value="">-Select Position-</option>
+
+                    <option value="Sales Executive">Sales Executive</option>
+                    <option value="Sales Manager">Sales Manager</option>
+                    <option value="Relationship Manager">Relationship Manager</option>
+                    <option value="Customer Support Executive">Customer Support Executive</option>
+                    <option value="HR Executive">HR Executive</option>
+                    <option value="Marketing Executive">Marketing Executive</option>
+                    <option value="Digital Marketing Executive">Digital Marketing Executive</option>
+                    <option value="Graphic Designer">Graphic Designer</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Receptionist">Receptionist</option>
+                    <option value="Site Engineer">Site Engineer</option>
+                    <option value="Civil Engineer">Civil Engineer</option>
+                    <option value="Architect">Architect</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Legal Executive">Legal Executive</option>
+                    <option value="IT Support">IT Support</option>
+                    <option value="Software Developer">Software Developer</option>
+                    <option value="Business Development Executive">Business Development Executive</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Photo</label>
+                <input type="file" name="photo" accept=".jpg,.jpeg,.png" required>
+            </div>
+            <div class="input-group">
+                <label>Resume</label>
+                <input type="file" name="resume" accept=".pdf" required>
+            </div>
+            <div class="input-group">
+                <label>Aadhar Card</label>
+                <input type="file" name="aadhar" accept=".jpg,.jpeg,.png, .pdf" required>
+            </div>
+            <div class="input-group">
+                <label>Do you have previous work experience?</label>
+
+                <select name="hasExperience" id="hasExperience" required>
+                    <option value="">-Select-</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="input-group" id="experienceContainer" style="display: none;">
+                <label>Experience Details</label>
+                <textarea
+                    name="experienceDetails"
+                    rows="4"
+                    placeholder="Mention your previous company, role, duration and responsibilities..."
+                ></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const hasExperience = document.getElementById("hasExperience");
+        const experienceContainer = document.getElementById("experienceContainer");
+
+        const experienceDetails = document.querySelector(
+            "textarea[name='experienceDetails']"
+        );
+
+        hasExperience.addEventListener("change", () => {
+            if (hasExperience.value === "true") {
+                experienceContainer.style.display = "block";
+                experienceDetails.required = true;
+            } else {
+                experienceContainer.style.display = "none";
+                experienceDetails.required = false;
+                experienceDetails.value = "";
+            }
+
+        });
+    </script>
+    <script src="./js/application.js"></script>
+</body>
+</html>

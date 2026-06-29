@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Applicant Dashboard</h1>
+                <p>Welcome Back</p>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <section class="profile-card">
+            <img id="profilePhoto" src="" alt="Profile Photo">
+
+            <div>
+                <h2 id="fullName">Loading...</h2>
+                <p id="email">Loading...</p>
+                <span id="statusBadge">Pending</span>
+            </div>
+        </section>
+        
+        <section clss="details-card">
+            <h2>Application Details</h2>
+            <div class="details-grid">
+                <div>
+                <h4>Job Role</h4>
+                    <p id="jobRole">Loading...</p>
+                </div>
+                <div>
+                    <label>Qualifications</label>
+                    <p id="qualification">Loading...</p>
+                </div>
+                <div>
+                    <label>Phone Number</label>
+                    <p id="phoneNo">Loading...</p>
+                </div>
+                <div>
+                    <label>Experience</label>
+                    <p id="experience">Loading...</p>
+                </div>
+                <div>
+                    <label>Applied on</label>
+                    <p id="createdAt">Loading...</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="documents-card">
+
+            <h2>Upload Documents</h2>
+            
+            <div class="upload-list">
+                <a id="resumeLink" target="_blank">View Resume</a>
+                <a id="aadharLink" target="_blank">View Aadhaar Card</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+    
+</body>
+</html>

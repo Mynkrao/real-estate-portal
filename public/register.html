@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <form id="registerForm">
+            <img class="form-image" src="./images/ireo-logo.png" alt="IREO Logo" width="150">
+            <h2>Create an Account</h2>
+
+            <div class="input-group">
+                <label>Username</label>
+                <input id="username" type="text" name="username" autocomplete="username" required> 
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required> 
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input id="password" type="password" name="password" autocomplete="new-password" required>
+            </div>
+
+            <button type="submit">Register</button>
+
+            <div>
+                <h4>Already have an account?</h4>
+                <a href="login.html">Sign in</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="./js/register.js"></script>
+</body>
+</html>

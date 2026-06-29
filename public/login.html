@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm">
+            <img class="form-image"  src="../images/ireo-logo.png" alt="ireo-logo" width="150px"></img>
+            <h2>Sign in to your account</h2>
+            <div class="input-group">
+                <label>EMAIL</label>
+                <input id="email" type="email" name="email" required> 
+            </div>
+            <div class="input-group">
+                <label>PASSWORD</label>
+                <input id="password" type="password" name="password" required>
+            </div>
+
+            <button type="submit" >Log In</button>
+
+            <div style="text-align: center;">___________________________________________________</div>
+            <div>
+                <h4>Don't have an account? </h4>
+                <button id="registerbtn" style="background: rgb(48, 126, 242); margin-top:15px ; " type="button">Sign up</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="./js/login.js"></script>
+</body>
+</html>
